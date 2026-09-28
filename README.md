@@ -1,16 +1,10 @@
 # 🧹 WITCH CART
 
-A Mario Kart–style pseudo-3D kart racer that runs in the browser. Mode 7 ground,
-eight witches, four circuits, items, drift boosts, dynamic weather, synthesised
-audio — and **no external assets at all**: every sprite, texture, track and sound
-is generated at runtime.
+A pseudo-3D kart racer that runs in the browser.
 
-```
-      /\
-     /  \        hex hollow · saltcoil sands · grim hollow · crystal dome
-    /____\       3-4 laps · 8 racers · 60 fps · one <canvas>
-   ()    ()
-```
+Built to see what Qwen3.8-Flash-Next creates with a single prompt.
+
+<img src="screenshot.png" alt="drawing" style="width:700px;"/>
 
 ## Run it
 
@@ -38,6 +32,26 @@ with a full meter for a shove of speed. **Hexes** zap every other racer on the
 grid; **shells** home in on the leader and can be reflected off a wall into
 whoever is behind you.
 
+
+## How this was created
+```
+mkdir witch-cart
+cd witch-cart
+```
+
+```
+omlx launch pi
+-> Qwen3.8-Flash-Next-oQ4e-mtp
+```
+
+```
+build a mario cart style game that runs in the browser
+please continue
+please continue
+```
+
+Jundot/Qwen3.8-Flash-Next-oQ4e-mtp on Mac Studio M5 Ultra 96GB
+![](/Qwen38Usage.png)
 ## Architecture
 
 Load order (see `index.html`) matters — each file hangs off the single `WC` global.
