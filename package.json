@@ -1,0 +1,25 @@
+{
+  "name": "witch-cart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Mario Kart-style pseudo-3D (Mode 7) kart racer for the browser. Zero external assets - geometry, sprites, audio and tracks are all generated at runtime.",
+  "scripts": {
+    "test": "node test/geom.js && node test/race.js && node test/smoke.js",
+    "geom": "node test/geom.js",
+    "race": "node test/race.js",
+    "smoke": "node test/smoke.js",
+    "shot": "node tools/shot.js",
+    "start": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "game",
+    "kart",
+    "mode-7",
+    "pseudo-3d",
+    "canvas",
+    "procedural",
+    "webaudio"
+  ],
+  "author": "",
+  "license": "MIT"
+}

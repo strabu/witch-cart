@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1">
+<title>WITCH CART — Mode-7 Grand Prix</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="view"></canvas>
+
+  <div id="overlay" class="pass">
+
+    <!-- ============ TITLE ============ -->
+    <section id="title" class="screen">
+      <div class="logo">
+        <span class="broom">🧹</span>
+        <h1>WITCH<span>CART</span></h1>
+        <p class="sub">a mode-7 grand prix for eight hags</p>
+      </div>
+      <button id="btnStart" class="big">PRESS&nbsp;START</button>
+      <div class="help">
+        <div><kbd>←</kbd><kbd>→</kbd> steer</div>
+        <div><kbd>↑</kbd> gas <kbd>↓</kbd> brake</div>
+        <div><kbd>SHIFT</kbd> drift &amp; charge</div>
+        <div><kbd>SPACE</kbd> item</div>
+        <div><kbd>P</kbd> pause <kbd>M</kbd> mute</div>
+      </div>
+    </section>
+
+    <!-- ============ SELECT ============ -->
+    <section id="select" class="screen hidden">
+      <h2>SELECT CIRCUIT</h2>
+      <div id="courses" class="grid"></div>
+      <h2>SELECT RIDER</h2>
+      <div id="chars" class="row"></div>
+      <div class="btns">
+        <button id="btnBack">BACK</button>
+        <button id="btnRace" class="big">RACE</button>
+      </div>
+      <p class="tip">← → circuit &nbsp;·&nbsp; ↑ ↓ rider &nbsp;·&nbsp; ENTER race</p>
+    </section>
+
+    <!-- ============ PAUSE ============ -->
+    <section id="pause" class="screen hidden">
+      <h2>PAUSED</h2>
+      <div class="btns">
+        <button id="btnResume" class="big">RESUME</button>
+        <button id="btnQuit">QUIT TO CIRCUITS</button>
+      </div>
+      <button id="btnMute">SOUND ON</button>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section id="results" class="screen hidden">
+      <h2 id="resultsTitle">RESULT</h2>
+      <div id="resultsList" class="results"></div>
+      <div class="btns">
+        <button id="btnAgain" class="big">RACE AGAIN</button>
+        <button id="btnMenu">CIRCUIT SELECT</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ TOUCH PADS ============ -->
+  <div id="touch">
+    <div class="tpad left" data-btn="left">◀</div>
+    <div class="tpad right" data-btn="right">▶</div>
+    <div class="tpad drift" data-btn="drift">DRIFT</div>
+    <div class="tpad item" data-btn="item">ITEM</div>
+    <div class="tpad brake" data-btn="brake">BRK</div>
+    <div class="tpad gas" data-btn="gas">GAS</div>
+  </div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/track.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/items.js"></script>
+<script src="js/kart.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/input.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/render.js"></script>
+<script src="js/game.js"></script>
+<script>WC.boot();</script>
+</body>
+</html>
